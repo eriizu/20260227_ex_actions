@@ -13,7 +13,7 @@ describe("API Todos - Tests d'intégration", () => {
     it("retourne une liste vide initialement", async () => {
       const response = await app.inject({ method: "GET", url: "/todos" });
 
-      expect(response.statusCode).toBe(200);
+      expect(response.statusCode).toBe(300);
       expect(response.json()).toEqual([]);
     });
 
