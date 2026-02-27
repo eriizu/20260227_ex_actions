@@ -1,0 +1,13 @@
+name: checkout and ls
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Lister les fichiers
+        run: ls -la
