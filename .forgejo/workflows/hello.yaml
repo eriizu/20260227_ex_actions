@@ -1,0 +1,10 @@
+name: hello
+
+on: push
+
+jobs:
+  hello:
+    runs-on: docker
+    steps:
+      - name: Dire bonjour
+        run: echo "Hello from GitHub Actions!"

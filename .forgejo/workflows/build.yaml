@@ -1,0 +1,21 @@
+name: checkout and build
+
+on: push
+
+jobs:
+  build:
+    runs-on: docker
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Build with tsc
+        run: npm run build
